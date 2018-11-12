@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>FCLM Registration</title>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initialscale=1.0">
+            <link href="main.css" type="text/css" rel="stylesheet"/>
+            <link href="signup.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div id="login">
+            <a href="signup.html">SIGN UP |</a>
+            <a href="login.jsp">LOG IN </a>
+        </div>
+        <div id="clublogo">
+            <a href="index.html">
+                <img src="Images\lamasia.jpg" alt="LOGO">
+            </a>
+        </div>
+        <div id="clubname">
+            <p>Football Club LaMasia</p>
+        </div>
+        <div id="menubar">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="ticket.html">TICKETS</a></li>
+                <li><a href="squad.html">SQUAD</a></li>
+                <li><a href="calendere.html">CALENDER</a></li>
+                <li><a href="store.html">STORE</a></li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            function validatePassword()
+            {
+                var password = document.getElementById('pass');
+                var confirm_password = document.getElementById('repass');
+                var message = document.getElementById('confirmMessage');
+                if(password.value === confirm_password.value)
+                { 
+                    message.innerHTML = "Passwords Match!";
+                }
+                else
+                { 
+                    message.innerHTML = "Passwords Do Not Match!";
+                }
+            }
+            password.onchange = validatePassword;
+            confirm_password.onkeyup = validatePassword;
+        </script>
+        <div id="box">
+        <div id="content">
+        <form action="signup" method="post">
+            <table>
+                <tr>
+                    <td>First Name</td>
+                    <td><input type="text" name="fname" id="fname" required></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td> <input type="text" name="lname" id="lname" required> </td>
+                </tr>
+                <tr>
+                    <td>Phone Number</td>
+                    <td> <input type="text" pattern="[0-9]{10}" min="10" max="10" name="num" id="num"> </td>
+                </tr>
+                <tr>
+                    <td>D.O.B</td>
+                    <td><input type="date" name="dob"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td><input type="radio" name="gen" value="m"> Male <input type="radio" name="gen" value="f"> Female </td>
+                </tr>
+                <tr>
+                    <td>Username</td>
+                    <td><input type="text" name="username" id="uname"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td> <input type="password" name="pass" id="pass" required></td>
+                </tr>
+                <tr>
+                    <td>Re-Enter Password</td>
+                    <td> <input type="password" name="repass" id="repass" required onkeyup="validatePassword();"> </td>
+                    <td><span id="confirmMessage" class="confirmMessage"></span></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="SIGN UP"></td>
+                    <td><input type="reset" value="RESET"></td>
+                </tr>
+            </table>
+        </form>
+        </div>
+        </div>
+    </body>
+</html>

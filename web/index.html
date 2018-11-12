@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>FCLM Login</title>
+        <link href="login.css" rel="stylesheet"/>
+        <link href="main.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div id="login">
+            <a href="signup.html">SIGN UP |</a>
+            <a href="login.jsp">LOG IN </a>
+        </div>
+        <div id="clublogo">
+            <a href="index.html">
+                <img src="Images\lamasia.jpg" alt="LOGO"/>
+            </a>
+        </div>
+        <div id="clubname">
+            <p>Football Club LaMasia</p>
+        </div>
+        <div id="menubar">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="ticket.html">TICKETS</a></li>
+                <li><a href="squad.html">SQUAD</a></li>
+                <li><a href="calender.html">CALENDER</a></li>
+                <li><a href="store.html">STORE</a></li>
+            </ul>
+        </div>
+        <div id="container">
+        <div id="formholder">
+        <form id="loginform" action=login method="post">
+        <table>
+            <tr>
+                <td>USERNAME</td>
+                <td><input type="text" name="username" id="username" required/></td>
+            </tr>
+            <tr>
+                <td>PASSWORD</td>
+                <td><input type="password" name="password" id="password" required/></td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="button" value="SUBMIT"></td>
+                <td><input type="reset" name="button2" value="RESET"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><a href="signup.html">SIGN UP</a></td>
+            </tr>
+        </table>
+        </form>
+        </div>
+        </div>
+    </body>
+    <script src="js/jquery.js"></script>
+    <script src="js/login.js"></script>
+</html>
